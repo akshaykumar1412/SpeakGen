@@ -7,8 +7,11 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "kokoro-js": fileURLToPath(new URL("../dist/kokoro.web.js", import.meta.url)),
+      "kokoro-js": fileURLToPath(new URL("../src/kokoro.js", import.meta.url)),
     },
+  },
+  optimizeDeps: {
+    exclude: ["kokoro-js"],
   },
   worker: { format: "es" },
   build: {
