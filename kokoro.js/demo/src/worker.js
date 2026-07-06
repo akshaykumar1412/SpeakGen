@@ -1,4 +1,4 @@
-import { KokoroTTS } from "../../dist/kokoro.js";
+import { KokoroTTS } from "kokoro-js";
 import { detectWebGPU } from "./utils.js";
 
 // Device detection
