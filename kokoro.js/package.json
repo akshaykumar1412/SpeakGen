@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build": "rm -rf dist types && rollup -c && tsc && cp ../LICENSE LICENSE",
+    "postbuild": "node scripts/copy-demo-build.js",
     "format": "prettier --write . --print-width 1000",
     "test": "vitest run"
   },
